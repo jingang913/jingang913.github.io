@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>监听页面scroll事件 | Hexo</title>
+  <title>js各种宽度的含义 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="监听页面滚动事件时，有时在body上监听并没有效果">
+  <meta name="description" content="clientWidth、offsetWidth、scrollWidth、width等">
 <meta property="og:type" content="article">
-<meta property="og:title" content="监听页面scroll事件">
-<meta property="og:url" content="https://jingang913.github.io.git/2017/07/25/jiantingscroll/index.html">
+<meta property="og:title" content="js各种宽度的含义">
+<meta property="og:url" content="https://jingang913.github.io.git/2016/10/15/width_height/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="监听页面滚动事件时，有时在body上监听并没有效果">
-<meta property="og:updated_time" content="2017-07-26T11:48:00.883Z">
+<meta property="og:description" content="clientWidth、offsetWidth、scrollWidth、width等">
+<meta property="og:updated_time" content="2016-10-15T13:22:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="监听页面scroll事件">
-<meta name="twitter:description" content="监听页面滚动事件时，有时在body上监听并没有效果">
+<meta name="twitter:title" content="js各种宽度的含义">
+<meta name="twitter:description" content="clientWidth、offsetWidth、scrollWidth、width等">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -63,12 +63,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-jiantingscroll" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-width_height" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/07/25/jiantingscroll/" class="article-date">
-  <time datetime="2017-07-25T13:11:06.000Z" itemprop="datePublished">2017-07-25</time>
+    <a href="/2016/10/15/width_height/" class="article-date">
+  <time datetime="2016-10-15T03:40:31.000Z" itemprop="datePublished">2016-10-15</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/备忘录/">备忘录</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -77,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      监听页面scroll事件
+      js各种宽度的含义
     </h1>
   
 
@@ -85,26 +89,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>监听页面滚动事件时，有时在body上监听并没有效果</p>
+        <p>clientWidth、offsetWidth、scrollWidth、width等</p>
 <a id="more"></a>
-<p>通过测试各大主流浏览器下window和document以及document.body上的滚动事件，得出以下结论： </p>
-<ol>
-<li><p>几乎所有浏览器都不支持在document.body上监听整个网页的滚动事件，除了QQ浏览器；</p>
-</li>
-<li><p>几乎所有浏览器都支持在window对象上监听整个网页的滚动事件；</p>
-</li>
-<li><p>几乎所有浏览器都支持在document对象上监听整个网页的滚动事件，除了QQ浏览器；</p>
-</li>
-<li><p>几乎所有浏览器都支持用document.documentElement.scrollTop来获取网页的滚动高度，除了Chrome和Safari；</p>
-</li>
-</ol>
-<p>获取网页滚动高度scrollTop的最佳实践为：把获取滚动高度的事件处理程序绑定到window对象上；</p>
-<p>通过获取document.documentElement.scrollTop和document.body.scrollTop两者之间较大值为网页的真实滚动高度。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&apos;window&apos;).on(&apos;scroll&apos;, function (e) &#123;</div><div class="line">    var top = aMath.max(document.body.scrollTop, document.documentElement.scrollTop);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>网页可见区域宽： document.body.clientWidth;<br>网页可见区域高： document.body.clientHeight;<br>网页可见区域宽： document.body.offsetWidth   (包括边线的宽);<br>网页可见区域高： document.body.offsetHeight  (包括边线的宽);<br>网页正文全文宽： document.body.scrollWidth;<br>网页正文全文高： document.body.scrollHeight;<br>网页被卷去的高： document.body.scrollTop;<br>网页被卷去的左： document.body.scrollLeft;<br>网页正文部分上： window.screenTop;<br>网页正文部分左： window.screenLeft;<br>屏幕分辨率的高： window.screen.height;<br>屏幕分辨率的宽： window.screen.width;<br>屏幕可用工作区高度： window.screen.availHeight;<br>屏幕可用工作区宽度：window.screen.availWidth;</p>
+<p>1、offsetWidth (width+padding+border)</p>
+<p>2、offsetLeft :<br>当前对象到其上级层左边的距离。<br>不能对其进行赋值.设置对象到其上级层左边的距离请用style.left属性。<br>style.left当前对象到其上级层左边的距离。<br>区别：1)style.left返回值除了数字外还带有单位px；<br>      2)如对象到其上级层左边的距离设定值为百分比，style.left返回此百分比,而offsetLeft则返回到其上级层左边的距离的值；<br>      3)如果没有给 HTML 元素指定过 left样式，则 style.left返回的是空字符串。</p>
+<p>3、 scrollWidth:获取对象的滚动宽度 。<br>    scrollHeight: 获取对象的滚动高度。<br>    scrollLeft:设置或获取位于对象左边界和对象中目前可见内容的最左端之间的距离(width+padding为一体)<br>    scrollTop:设置或获取位于对象最顶端和对象中可见内容的最顶端之间的距离；(height+padding为一体)<br>    clientWidth: 获取对象可见内容的宽度，不包括滚动条，不包括边框；<br>    clientHeight: 获取对象可见内容的高度，不包括滚动条，不包括边框；<br>    clientLeft: 获取对象的border宽度<br>    clientTop：获取对象的border高度<br>    offsetParent :当前对象的上级层对象.</p>
+<p>4、 IE6.0、FF1.06+：<br>    clientWidth = width + padding<br>    clientHeight = height + padding<br>    offsetWidth = width + padding + border<br>    offsetHeight = height + padding + border</p>
+<p>5、    IE5.0/5.5：<br>    clientWidth = width - border<br>    clientHeight = height - border<br>    offsetWidth = width<br>    offsetHeight = height</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jingang913.github.io.git/2017/07/25/jiantingscroll/" data-id="cj5kyiqi30003k4v46lrktkj3" class="article-share-link">Share</a>
+      <a data-url="https://jingang913.github.io.git/2016/10/15/width_height/" data-id="cj5kyiqig0007k4v4g9wlv02l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -113,19 +110,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/07/26/hanzijianting/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/16/vueInstall/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          输入汉字时的监听
+          vuejs 安装
         
       </div>
     </a>
   
   
-    <a href="/2016/10/29/markdown/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/10/15/sublime/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">markdown 语法</div>
+      <div class="article-nav-title">Sublime Text3 快捷键汇总</div>
     </a>
   
 </nav>

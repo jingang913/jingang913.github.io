@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>监听页面scroll事件 | Hexo</title>
+  <title>Sublime Text3 快捷键汇总 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="监听页面滚动事件时，有时在body上监听并没有效果">
+  <meta name="description" content="Ctrl+D 选词 （反复按快捷键，即可继续向下同时选中下一个相同的文本进行同时编辑）Ctrl+G 跳转到相应的行Ctrl+J 合并行（已选择需要合并的多行时）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="监听页面scroll事件">
-<meta property="og:url" content="https://jingang913.github.io.git/2017/07/25/jiantingscroll/index.html">
+<meta property="og:title" content="Sublime Text3 快捷键汇总">
+<meta property="og:url" content="https://jingang913.github.io.git/2016/10/15/sublime/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="监听页面滚动事件时，有时在body上监听并没有效果">
-<meta property="og:updated_time" content="2017-07-26T11:48:00.883Z">
+<meta property="og:description" content="Ctrl+D 选词 （反复按快捷键，即可继续向下同时选中下一个相同的文本进行同时编辑）Ctrl+G 跳转到相应的行Ctrl+J 合并行（已选择需要合并的多行时）">
+<meta property="og:updated_time" content="2016-10-15T13:06:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="监听页面scroll事件">
-<meta name="twitter:description" content="监听页面滚动事件时，有时在body上监听并没有效果">
+<meta name="twitter:title" content="Sublime Text3 快捷键汇总">
+<meta name="twitter:description" content="Ctrl+D 选词 （反复按快捷键，即可继续向下同时选中下一个相同的文本进行同时编辑）Ctrl+G 跳转到相应的行Ctrl+J 合并行（已选择需要合并的多行时）">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -63,12 +63,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-jiantingscroll" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-sublime" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/07/25/jiantingscroll/" class="article-date">
-  <time datetime="2017-07-25T13:11:06.000Z" itemprop="datePublished">2017-07-25</time>
+    <a href="/2016/10/15/sublime/" class="article-date">
+  <time datetime="2016-10-15T03:37:57.000Z" itemprop="datePublished">2016-10-15</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/备忘录/">备忘录</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -77,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      监听页面scroll事件
+      Sublime Text3 快捷键汇总
     </h1>
   
 
@@ -85,26 +89,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>监听页面滚动事件时，有时在body上监听并没有效果</p>
-<a id="more"></a>
-<p>通过测试各大主流浏览器下window和document以及document.body上的滚动事件，得出以下结论： </p>
-<ol>
-<li><p>几乎所有浏览器都不支持在document.body上监听整个网页的滚动事件，除了QQ浏览器；</p>
-</li>
-<li><p>几乎所有浏览器都支持在window对象上监听整个网页的滚动事件；</p>
-</li>
-<li><p>几乎所有浏览器都支持在document对象上监听整个网页的滚动事件，除了QQ浏览器；</p>
-</li>
-<li><p>几乎所有浏览器都支持用document.documentElement.scrollTop来获取网页的滚动高度，除了Chrome和Safari；</p>
-</li>
-</ol>
-<p>获取网页滚动高度scrollTop的最佳实践为：把获取滚动高度的事件处理程序绑定到window对象上；</p>
-<p>通过获取document.documentElement.scrollTop和document.body.scrollTop两者之间较大值为网页的真实滚动高度。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&apos;window&apos;).on(&apos;scroll&apos;, function (e) &#123;</div><div class="line">    var top = aMath.max(document.body.scrollTop, document.documentElement.scrollTop);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+        <p>Ctrl+D 选词 （反复按快捷键，即可继续向下同时选中下一个相同的文本进行同时编辑）<br>Ctrl+G 跳转到相应的行<br>Ctrl+J 合并行（已选择需要合并的多行时）<br><a id="more"></a><br>Ctrl+L 选择整行（按住-继续选择下行）<br>Ctrl+M 光标移动至括号内开始或结束的位置<br>Ctrl+T 词互换<br>Ctrl+U 软撤销<br>Ctrl+P 查找当前项目中的文件和快速搜索；输入 @ 查找文件主标题/函数；或者输入 : 跳转到文件某行；<br>Ctrl+R 快速列出/跳转到某个函数<br>Ctrl+K Backspace 从光标处删除至行首<br>Ctrl+K+B 开启/关闭侧边栏<br>Ctrl+KK 从光标处删除至行尾<br>Ctrl+K+T 折叠属性<br>Ctrl+K+U 改为大写<br>Ctrl+K+L 改为小写<br>Ctrl+K+0 展开所有<br>Ctrl+Enter 插入行后（快速换行）<br>Ctrl+Tab 当前窗口中的标签页切换</p>
+<p>Ctrl+Shift+A 选择光标位置父标签对儿<br>Ctrl+Shift+D 复制光标所在整行，插入在该行之前<br>ctrl+shift+F 在文件夹内查找，与普通编辑器不同的地方是sublime允许添加多个文件夹进行查找<br>Ctrl+Shift+K 删除整行<br>Ctrl+Shift+L 鼠标选中多行（按下快捷键），即可同时编辑这些行<br>Ctrl+Shift+M 选择括号内的内容（按住-继续选择父括号）<br>Ctrl+Shift+P 打开命令面板<br>Ctrl+Shift+/ 注释已选择内容<br>Ctrl+Shift+↑可以移动此行代码，与上行互换<br>Ctrl+Shift+↓可以移动此行代码，与下行互换<br>Ctrl+Shift+[ 折叠代码<br>Ctrl+Shift+] 展开代码<br>Ctrl+Shift+Enter 光标前插入行</p>
+<p>Ctrl+PageDown 、Ctrl+PageUp 文件按开启的前后顺序切换</p>
+<p>Ctrl+Z 撤销<br>Ctrl+Y 恢复撤销<br>Ctrl+F2 设置/取消书签<br>Ctrl+/ 注释整行（如已选择内容，同“Ctrl+Shift+/”效果）<br>Ctrl+鼠标左键 可以同时选择要编辑的多处文本</p>
+<p>Shift+鼠标右键（或使用鼠标中键）可以用鼠标进行竖向多行选择<br>Shift+F2 上一个书签<br>Shift+Tab 去除缩进<br>Alt+Shift+1（非小键盘）窗口分屏，恢复默认1屏<br>Alt+Shift+2 左右分屏-2列<br>Alt+Shift+3 左右分屏-3列<br>Alt+Shift+4 左右分屏-4列<br>Alt+Shift+5 等分4屏<br>Alt+Shift+8 垂直分屏-2屏<br>Alt+Shift+9 垂直分屏-3屏</p>
+<p>Ctrl+Shift+分屏序号 将当前焦点页分配到分屏序号页</p>
+<p>Alt+. 闭合当前标签<br>Alt+F3 选中文本按下快捷键，即可一次性选择全部的相同文本进行同时编辑</p>
+<p>Tab 缩进 自动完成<br>F2 下一个书签<br>F6 检测语法错误<br>F9 行排序(按a-z)<br>F11 全屏模式</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jingang913.github.io.git/2017/07/25/jiantingscroll/" data-id="cj5kyiqi30003k4v46lrktkj3" class="article-share-link">Share</a>
+      <a data-url="https://jingang913.github.io.git/2016/10/15/sublime/" data-id="cj5kyiqie0006k4v4hry5yx4i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -113,19 +110,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/07/26/hanzijianting/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/15/width_height/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          输入汉字时的监听
+          js各种宽度的含义
         
       </div>
     </a>
   
   
-    <a href="/2016/10/29/markdown/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/10/14/hexo-3-X/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">markdown 语法</div>
+      <div class="article-nav-title">hexo 3.X 安装配置</div>
     </a>
   
 </nav>

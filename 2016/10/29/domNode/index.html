@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>节点类型 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="每个节点都拥有包含着关于节点某些信息的属性。这些属性是：nodeName（节点名称） 、nodeValue（节点值） 、nodeType（节点类型）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="节点类型">
+<meta property="og:url" content="https://jingang913.github.io.git/2016/10/29/domNode/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="每个节点都拥有包含着关于节点某些信息的属性。这些属性是：nodeName（节点名称） 、nodeValue（节点值） 、nodeType（节点类型）">
+<meta property="og:updated_time" content="2016-10-29T09:58:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="节点类型">
+<meta name="twitter:description" content="每个节点都拥有包含着关于节点某些信息的属性。这些属性是：nodeName（节点名称） 、nodeValue（节点值） 、nodeType（节点类型）">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://jingang913.github.io.git"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-domNode" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/29/domNode/" class="article-date">
+  <time datetime="2016-10-29T09:25:34.000Z" itemprop="datePublished">2016-10-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      节点类型
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>每个节点都拥有包含着关于节点某些信息的属性。这些属性是：<br>nodeName（节点名称） 、nodeValue（节点值） 、nodeType（节点类型） </p>
+<a id="more"></a>
+<p>1、nodeType 属性可返回节点的类型。</p>
+<p>最重要的节点类型是：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">元素类型</th>
+<th style="text-align:left">节点类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">元素(ELEMENT_NODE)</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">属性(ATTRIBUTE_NODE)</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">文本(TEXT_NODE)</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td style="text-align:left">注释(COMMENT_NODE)</td>
+<td style="text-align:left">8</td>
+</tr>
+<tr>
+<td style="text-align:left">文档(DOCUMENT_NODE)</td>
+<td style="text-align:left">9</td>
+</tr>
+</tbody>
+</table>
+<p>在实际应用中，经常用到的就是元素节点、属性节点和文本节点</p>
+<p>2、元素节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;HTML&gt;  </div><div class="line">&lt;HEAD&gt;  </div><div class="line">&lt;TITLE&gt;空谷悠悠&lt;/TITLE&gt;  </div><div class="line">&lt;/HEAD&gt;  </div><div class="line">&lt;BODY&gt;  </div><div class="line">    &lt;table&gt;  </div><div class="line">        &lt;tr&gt;  </div><div class="line">            &lt;td id=&quot;john&quot; name=&quot;myname&quot;&gt;John&lt;/td&gt;  </div><div class="line">            &lt;td&gt;Doe&lt;/td&gt;  </div><div class="line">            &lt;td id=&quot;jack&quot;&gt;Jack&lt;/td&gt;  </div><div class="line">        &lt;/tr&gt;  </div><div class="line">    &lt;/table&gt;  </div><div class="line">    &lt;script&gt;  </div><div class="line">        var d = document.getElementById(&quot;john&quot;);  </div><div class="line">        alert(d.nodeType)  </div><div class="line">        alert(d.nodeName)  </div><div class="line">        alert(d.nodeValue)  </div><div class="line">    &lt;/script&gt;  </div><div class="line">&lt;/BODY&gt;  </div><div class="line">&lt;/HTML&gt;</div></pre></td></tr></table></figure>
+<p>其三个属性的值分别为：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">nodeType：</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:right">nodeName：</td>
+<td style="text-align:left">元素标记名 //此处为TD</td>
+</tr>
+<tr>
+<td style="text-align:right">nodeValue：</td>
+<td style="text-align:left">null</td>
+</tr>
+</tbody>
+</table>
+<p>3、属性节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;HTML&gt;  </div><div class="line">&lt;HEAD&gt;  </div><div class="line">&lt;TITLE&gt;New Document&lt;/TITLE&gt;  </div><div class="line">&lt;/HEAD&gt;  </div><div class="line">&lt;BODY&gt;  </div><div class="line"> &lt;table&gt;  </div><div class="line">  &lt;tr&gt;  </div><div class="line">   &lt;td id=&quot;john&quot; name=&quot;myname&quot;&gt;John&lt;/td&gt;  </div><div class="line">   &lt;td&gt;Doe&lt;/td&gt;  </div><div class="line">   &lt;td id=&quot;jack&quot;&gt;Jack&lt;/td&gt;  </div><div class="line">  &lt;/tr&gt;  </div><div class="line"> &lt;/table&gt;  </div><div class="line"> &lt;script&gt;  </div><div class="line">  var d = document.getElementsByTagName(&quot;td&quot;)[0].firstChild  </div><div class="line">  alert(d.nodeType)  </div><div class="line">  alert(d.nodeName)  </div><div class="line">  alert(d.nodeValue)  </div><div class="line"> &lt;/script&gt;  </div><div class="line">&lt;/BODY&gt;  </div><div class="line">&lt;/HTML&gt;</div></pre></td></tr></table></figure>
+<p>其三个属性的值分别为：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">nodeType：</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:right">nodeName：</td>
+<td style="text-align:left">属性名  // name</td>
+</tr>
+<tr>
+<td style="text-align:right">nodeValue：</td>
+<td style="text-align:left">属性值  //myname</td>
+</tr>
+</tbody>
+</table>
+<p>4、文本节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;HTML&gt;  </div><div class="line">&lt;HEAD&gt;  </div><div class="line">&lt;TITLE&gt;New Document&lt;/TITLE&gt;  </div><div class="line">&lt;/HEAD&gt;  </div><div class="line">&lt;BODY&gt;  </div><div class="line"> &lt;table&gt;  </div><div class="line">  &lt;tr&gt;  </div><div class="line">   &lt;td id=&quot;john&quot; name=&quot;myname&quot;&gt;John&lt;/td&gt;  </div><div class="line">   &lt;td&gt;Doe&lt;/td&gt;  </div><div class="line">   &lt;td id=&quot;jack&quot;&gt;Jack&lt;/td&gt;  </div><div class="line">  &lt;/tr&gt;  </div><div class="line"> &lt;/table&gt;  </div><div class="line"> &lt;script&gt;  </div><div class="line">  var d = document.getElementsByTagName(&quot;td&quot;)[0].firstChild  </div><div class="line">  alert(d.nodeType)  </div><div class="line">  alert(d.nodeName)  </div><div class="line">  alert(d.nodeValue)  </div><div class="line"> &lt;/script&gt;  </div><div class="line">&lt;/BODY&gt;  </div><div class="line">&lt;/HTML&gt;</div></pre></td></tr></table></figure>
+<p>其三个属性的值分别为：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">nodeType：</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td style="text-align:right">nodeName：</td>
+<td style="text-align:left">#text</td>
+</tr>
+<tr>
+<td style="text-align:right">nodeValue：</td>
+<td style="text-align:left">文本内容   // John</td>
+</tr>
+</tbody>
+</table>
+<p>结束</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://jingang913.github.io.git/2016/10/29/domNode/" data-id="cj5kyiqht0000k4v4d5ibspqs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/29/markdown/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          markdown 语法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/16/vueInstall/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">vuejs 安装</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/备忘录/">备忘录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/26/hanzijianting/">输入汉字时的监听</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/25/jiantingscroll/">监听页面scroll事件</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/29/markdown/">markdown 语法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/29/domNode/">节点类型</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/16/vueInstall/">vuejs 安装</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Jingang Li<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

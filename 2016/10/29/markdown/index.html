@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>markdown 语法 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Markdown 12个基本知识点这些是从网上搜索的，用以备忘">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown 语法">
+<meta property="og:url" content="https://jingang913.github.io.git/2016/10/29/markdown/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Markdown 12个基本知识点这些是从网上搜索的，用以备忘">
+<meta property="og:updated_time" content="2016-10-30T03:56:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="markdown 语法">
+<meta name="twitter:description" content="Markdown 12个基本知识点这些是从网上搜索的，用以备忘">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://jingang913.github.io.git"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-markdown" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/29/markdown/" class="article-date">
+  <time datetime="2016-10-29T09:58:55.000Z" itemprop="datePublished">2016-10-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      markdown 语法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Markdown 12个基本知识点<br>这些是从网上搜索的，用以备忘</p>
+<a id="more"></a>
+<p>1、 标题设置（让字体变大，和word的标题意思一样）<br>在Markdown当中设置标题，有两种方式：<br>第一种：通过在文字下方添加“=”和“-”，他们分别表示一级标题和二级标题。<br>第二种：在文字开头加上 “#”，通过“#”数量表示几级标题。（一共只有1~6级标题，1级标题字体最大）</p>
+<p>2、 块注释（blockquote）<br>通过在文字开头添加“&gt;”表示块注释。（当&gt;和文字之间添加五个blank时，块注释的文字会有变化。）</p>
+<p>3、 斜体<br>将需要设置为斜体的文字两端使用1个“*”或者“_”夹起来</p>
+<p>4、 粗体<br>将需要设置为斜体的文字两端使用2个“*”或者“_”夹起来</p>
+<p>5、 无序列表<br>在文字开头添加(‘<em>‘, +, and -)实现无序列表。但是要注意在(‘</em>‘, +, and -)和文字之间需要添加空格。（建议：一个文档中只是用一种无序列表的表示方式）</p>
+<p>6、 有序列表<br>使用数字后面跟上句号。（还要有空格）</p>
+<p>7、 链接（Links）<br>Markdown中有两种方式，实现链接，分别为内联方式和引用方式。<br>内联方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">This is an [example link](http://example.com/).</div></pre></td></tr></table></figure></p>
+<p>引用方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].  </div><div class="line"></div><div class="line">[1]: http://google.com/        &quot;Google&quot; </div><div class="line">[2]: http://search.yahoo.com/  &quot;Yahoo Search&quot; </div><div class="line">[3]: http://search.msn.com/    &quot;MSN Search&quot;</div></pre></td></tr></table></figure></p>
+<p>8、 图片（Images）<br>图片的处理方式和链接的处理方式，非常的类似。<br>内联方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![alt text](/path/to/img.jpg &quot;Title&quot;)</div></pre></td></tr></table></figure></p>
+<p>引用方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">![alt text][id] </div><div class="line"></div><div class="line">[id]: /path/to/img.jpg &quot;Title&quot;</div></pre></td></tr></table></figure></p>
+<p>9、 代码（HTML中所谓的Code）<br>实现方式有两种：<br>第一种：简单文字出现一个代码框。使用<code>&lt;blockquote&gt;</code>。（<code>不是单引号而是左上角的ESC下面~中的</code>）<br>第二种：大片文字需要实现代码框。使用Tab和四个空格。</p>
+<p>10、 脚注（footnote）<br>实现方式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hello[^hello]</div><div class="line"></div><div class="line"></div><div class="line">[^hello]: hi</div></pre></td></tr></table></figure></p>
+<p>11、 下划线<br>在空白行下方添加三条“-”横线。（前面讲过在文字下方添加“-”，实现的2级标题）</p>
+<p>12、上标、下标和特殊符</p>
+<p><strong>上标</strong>的HTML标签的是&lt; sup &gt;，所以如果要打上标的话就用以下格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">n&lt;sup&gt;2&lt;/sup&gt;=n+1</div></pre></td></tr></table></figure></p>
+<p>显示效果就是：n<sup>2</sup>=n+1</p>
+<p><strong>下标</strong>的HTML标签的是&lt; sub &gt;,例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a=log&lt;sub&gt;2&lt;/sub&gt;b</div></pre></td></tr></table></figure></p>
+<p>显示效果就是：a=log<sub>2</sub>b</p>
+<p><strong>特殊符</strong>则使用HTML特殊符</p>
+<p>13、表格</p>
+<p>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">|        标题1         |      标题2      |      标题3      |</div><div class="line">|:-------------------- |:--------------: | --------------: |</div><div class="line">|        内容1         |     内容1       |     内容1       |</div><div class="line">|        内容2         |     内容2       |     内容2       |</div><div class="line">|        内容3         |     内容3       |     内容3       |</div></pre></td></tr></table></figure>
+<p>第二行:设置对齐方式，结果如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">标题1</th>
+<th style="text-align:center">标题2</th>
+<th style="text-align:right">标题3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">内容1</td>
+<td style="text-align:center">内容1</td>
+<td style="text-align:right">内容1</td>
+</tr>
+<tr>
+<td style="text-align:left">内容2</td>
+<td style="text-align:center">内容2</td>
+<td style="text-align:right">内容2</td>
+</tr>
+<tr>
+<td style="text-align:left">内容3</td>
+<td style="text-align:center">内容3</td>
+<td style="text-align:right">内容3</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://jingang913.github.io.git/2016/10/29/markdown/" data-id="cj5kyiqia0005k4v4af38lrzx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/07/25/jiantingscroll/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          监听页面scroll事件
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/29/domNode/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">节点类型</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/备忘录/">备忘录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/26/hanzijianting/">输入汉字时的监听</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/25/jiantingscroll/">监听页面scroll事件</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/29/markdown/">markdown 语法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/29/domNode/">节点类型</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/16/vueInstall/">vuejs 安装</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Jingang Li<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
